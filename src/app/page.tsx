@@ -3,8 +3,6 @@
 // import GameWrapper from "./Components/GameWrapper";
 
 
-const INPUT_PATH = './data/character_data.csv'
-
 /**
  * Performs data loading outside of rendering the game so it only happens once.
  * @returns <Game>
