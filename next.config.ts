@@ -1,10 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-
-  output: "export",  // <=== enables static exports
-
+  output: "export",
+  basePath: "/Civics",
+  assetPrefix: "/Civics/",
 };
 
 export default nextConfig;
+
+

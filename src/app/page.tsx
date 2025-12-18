@@ -36,14 +36,8 @@ export default function Page() {
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Background Image */}
-      {/* <Image
-        src="\\background.jpg" // place image in /public
-        alt="Background"
-        fill
-        priority
-        className="object-cover"
-      /> */}
-      <img src="/background.jpg" />
+      <Image src="/background.jpg" fill alt="Background" />
+
 
       {/* Clickable Overlay Images */}
       {hotspots.map(hotspot => (
