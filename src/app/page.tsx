@@ -1,6 +1,6 @@
 // import { parse } from "csv-parse/sync"
 // import * as fs from 'fs'
-// import GameWrapper from "./Components/GameWrapper";
+import GameWrapper from "./Components/GameWrapper";
 
 
 /**
@@ -18,9 +18,7 @@ export default function Home() {
       backgroundImage: `url(https://media.istockphoto.com/id/1401428037/photo/empty-art-gallery-wall.jpg?s=612x612&w=0&k=20&c=FRqkxuNSepWDZCnpGgjuam2YQslDqCsAhCq5tcCten8=)`
     }}>
     <div className="game-container overflow-y-scroll w-full h-full">
-      {/* <GameWrapper 
-                    allCharacterData={allCharacterData}>
-                </GameWrapper> */}
+      <GameWrapper />
     </div>
   </div>
 }
