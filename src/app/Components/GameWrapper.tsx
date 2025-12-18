@@ -1,3 +1,5 @@
+"use client"
+
 // GameWrapper.tsx
 import React, { useState } from "react";
 import gearIcon from "../settingsGear.png";
