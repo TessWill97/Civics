@@ -10,6 +10,7 @@ interface GameItem {
     imageSrc: string;
     title: string;
     description: string;
+    position: { top: string; left: string }; // New: manual position
 }
 
 const gameItems: GameItem[] = [
@@ -17,19 +18,22 @@ const gameItems: GameItem[] = [
         id: 1,
         imageSrc: gearIcon.src,
         title: "Item 1",
-        description: "This is the description for item 1."
+        description: "This is the description for item 1.",
+        position: { top: "10%", left: "20%" }
     },
     {
         id: 2,
         imageSrc: gearIcon.src,
         title: "Item 2",
-        description: "This is the description for item 2."
+        description: "This is the description for item 2.",
+        position: { top: "40%", left: "50%" }
     },
     {
         id: 3,
         imageSrc: gearIcon.src,
         title: "Item 3",
-        description: "This is the description for item 3."
+        description: "This is the description for item 3.",
+        position: { top: "70%", left: "30%" }
     }
 ];
 
@@ -40,13 +44,14 @@ const GameWrapper: React.FC = () => {
     const closeModal = () => setSelectedItem(null);
 
     return (
-        <div className="game-wrapper flex flex-wrap gap-4 p-4 justify-center">
+        <div className="relative w-full h-screen">
             {gameItems.map((item) => (
                 <img
                     key={item.id}
                     src={item.imageSrc}
                     alt={item.title}
-                    className="cursor-pointer w-32 h-32 object-cover rounded-lg shadow-md hover:scale-105 transition-transform"
+                    className="cursor-pointer w-32 h-32 object-cover rounded-lg shadow-md hover:scale-105 transition-transform absolute"
+                    style={{ top: item.position.top, left: item.position.left }}
                     onClick={() => openModal(item)}
                 />
             ))}
