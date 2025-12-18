@@ -2,7 +2,6 @@
 // import * as fs from 'fs'
 import GameWrapper from "./Components/GameWrapper";
 
-
 /**
  * Performs data loading outside of rendering the game so it only happens once.
  * @returns <Game>
