@@ -1,6 +1,6 @@
-import { parse } from "csv-parse/sync"
-import * as fs from 'fs'
-import GameWrapper from "./Components/GameWrapper";
+// import { parse } from "csv-parse/sync"
+// import * as fs from 'fs'
+// import GameWrapper from "./Components/GameWrapper";
 
 
 const INPUT_PATH = './data/character_data.csv'
