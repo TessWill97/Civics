@@ -10,7 +10,7 @@
 export default function Home() {
   //// Recieve correct answer of the day from API (Might need loading bar)
   // Use parser to read in data 
-  return <div className="background bg-cover bg-center flex justify-center"
+  return <div className="background bg-contain bg-center flex justify-center"
     style={{
       height: "100vh",
       backgroundAttachment: "fixed",
