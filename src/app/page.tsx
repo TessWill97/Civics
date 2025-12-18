@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import buttonImage from "../infoButton.png";
 
 // Simple clickable overlay definitions
 const hotspots = [
@@ -47,12 +48,7 @@ export default function Page() {
           className="absolute -translate-x-1/2 -translate-y-1/2"
           style={{ left: hotspot.x, top: hotspot.y }}
         >
-          <Image
-            src="/icon.png" // overlay icon image
-            alt={hotspot.label}
-            width={48}
-            height={48}
-          />
+          <img src={buttonImage.src} alt="Info" className="w-full h-full object-cover scale-125" />
         </button>
       ))}
 
