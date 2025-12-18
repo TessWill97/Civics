@@ -37,7 +37,7 @@ export default function Page() {
     <div className="relative w-full h-screen overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/background.jpg" // place image in /public
+        src="\\background.jpg" // place image in /public
         alt="Background"
         fill
         priority
