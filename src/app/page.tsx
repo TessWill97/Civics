@@ -1,49 +1,83 @@
-import { parse } from "csv-parse/sync"
-import * as fs from 'fs'
-import GameWrapper from "./Components/GameWrapper";
+"use client";
 
+import Image from "next/image";
+import { useState } from "react";
 
-const INPUT_PATH = './data/character_data.csv'
-
-/**
- * Performs data loading outside of rendering the game so it only happens once.
- * @returns <Game>
- */
-export default function Home() {
-  //// Recieve correct answer of the day from API (Might need loading bar)
-  // Use parser to read in data 
-  let file : null | string = null;
-  file = fs.readFileSync(INPUT_PATH, 'utf8');
-  const tempData : null | string[][] = parse(file, {});
-
-  // Confirm data was read in correctly
-  if (tempData === null) {
-    throw new Error("Didn't read in any characters")
+// Simple clickable overlay definitions
+const hotspots = [
+  {
+    id: 1,
+    label: "Hotspot One",
+    x: "20%",
+    y: "30%",
+    text: "This is the text shown when Hotspot One is clicked."
+  },
+  {
+    id: 2,
+    label: "Hotspot Two",
+    x: "55%",
+    y: "45%",
+    text: "Here is some information related to Hotspot Two."
+  },
+  {
+    id: 3,
+    label: "Hotspot Three",
+    x: "70%",
+    y: "65%",
+    text: "Additional details appear for Hotspot Three."
   }
+];
 
-  // Organize and store data for use later
-  const allCharacterData: Map<string, string[]> = new Map<string, string[]>()
+export default function Page() {
+  const [activeHotspot, setActiveHotspot] = useState<number | null>(null);
 
+  const activeData = hotspots.find(h => h.id === activeHotspot);
 
-  for (let i = 0; i < tempData.length; i++) {
-    const row: string[] = tempData[i];
-    allCharacterData.set(row[0], row.slice(1));
-  }
+  return (
+    <div className="relative w-full h-screen overflow-hidden">
+      {/* Background Image */}
+      <Image
+        src="/background.jpg" // place image in /public
+        alt="Background"
+        fill
+        priority
+        className="object-cover"
+      />
 
-  return <div className="background bg-cover bg-center flex justify-center"
-              style={{
-                height: "100vh",
-                backgroundAttachment: "fixed",
-                backgroundPosition: "center",
-                backgroundImage: `url(https://static.wixstatic.com/media/94aeec_7f348c6465ca474aa9503b3640e76faf~mv2.jpg/v1/fill/w_1290,h_885,al_c,q_90/file.jpg)`
-              }}> 
-              <div className="game-container overflow-y-scroll w-full h-full">
-                <GameWrapper 
-                    allCharacterData={allCharacterData}>
-                </GameWrapper>
-                {/* <Game todaysAnswer={todaysAnswer} allCharacterData={allCharacterData} initialDifficulties={difficulties}></Game> */}
-              </div>
-          </div> 
+      {/* Clickable Overlay Images */}
+      {hotspots.map(hotspot => (
+        <button
+          key={hotspot.id}
+          onClick={() => setActiveHotspot(hotspot.id)}
+          className="absolute -translate-x-1/2 -translate-y-1/2"
+          style={{ left: hotspot.x, top: hotspot.y }}
+        >
+          <Image
+            src="/icon.png" // overlay icon image
+            alt={hotspot.label}
+            width={48}
+            height={48}
+          />
+        </button>
+      ))}
+
+      {/* Text Display Panel */}
+      {activeData && (
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-xl bg-white/90 rounded-xl shadow-lg p-6">
+          <h2 className="text-xl font-semibold mb-2">
+            {activeData.label}
+          </h2>
+          <p className="text-base mb-4">
+            {activeData.text}
+          </p>
+          <button
+            onClick={() => setActiveHotspot(null)}
+            className="text-sm underline"
+          >
+            Close
+          </button>
+        </div>
+      )}
+    </div>
+  );
 }
-
-
