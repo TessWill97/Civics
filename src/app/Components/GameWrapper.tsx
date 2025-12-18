@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Game from "./Game";
+import SettingsGear from "./SettingsGear"
 
 interface GameWrapperProps {
   allCharacterData: Map<string, string[]>,
