@@ -33,7 +33,7 @@ const gameItems: GameItem[] = [
         imageSrc: articlesConfederation.src,
         title: "Item 2",
         description: "This is the description for item 2.",
-        position: { top: "15%", left: "39%" }
+        position: { top: "15%", left: "40%" }
     },
     {
         id: 3,
@@ -68,14 +68,14 @@ const gameItems: GameItem[] = [
         imageSrc: ReligiousFreedom.src,
         title: "Item 7",
         description: "This is the description for item 7.",
-        position: { top: "40%", left: "55%" }
+        position: { top: "40%", left: "54%" }
     },
     {
         id: 8,
         imageSrc: VADeclaration.src,
         title: "Item 8",
         description: "This is the description for item 8.",
-        position: { top: "40%", left: "70%" }
+        position: { top: "40%", left: "68%" }
     },
 ];
 
@@ -92,7 +92,7 @@ const GameWrapper: React.FC = () => {
                     key={item.id}
                     src={item.imageSrc}
                     alt={item.title}
-                    className="cursor-pointer w-32 h-32 object-cover shadow-md hover:scale-105 transition-transform absolute"
+                    className="cursor-pointer w-32 h-48 object-cover shadow-md hover:scale-105 transition-transform absolute"
                     style={{ top: item.position.top, left: item.position.left }}
                     onClick={() => openModal(item)}
                 />
