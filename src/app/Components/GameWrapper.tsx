@@ -31,58 +31,58 @@ const gameItems: GameItem[] = [
         position: { top: "20%", left: "25%" }
     },
     {
-        id: 2,
-        imageSrc: articlesConfederation.src,
-        title: "Articles of Confederation",
-        year: "1777",
+        id: 3,
+        imageSrc: ChartersVA.src,
+        title: "Charters of the Virginia Company of london",
+        year: "1606",
         description: "This is the description for item 2.",
         position: { top: "20%", left: "40%" }
     },
     {
         id: 3,
-        imageSrc: ChartersVA.src,
-        title: "Charters of Virginia",
-        year: "1606",
+        imageSrc: VADeclaration.src,
+        title: "Virginia Declaration of Rights",
+        year: "1776",
         description: "This is the description for item 3.",
         position: { top: "20%", left: "54%" }
     },
     {
         id: 4,
-        imageSrc: BillOfRights.src,
-        title: "Bill of Rights",
-        year: "1791",
+        imageSrc: articlesConfederation.src,
+        title: "Articles of Confederation",
+        year: "1776",
         description: "This is the description for item 4.",
         position: { top: "20%", left: "68%" }
     },
     {
         id: 5,
-        imageSrc: Constitution.src,
-        title: "U.S. Constitution",
-        year: "1787",
+        imageSrc: Declaration.src,
+        title: "Declaration of Independence",
+        year: "1776",
         description: "This is the description for item 5.",
         position: { top: "50%", left: "25%" }
     },
     {
         id: 6,
-        imageSrc: Declaration.src,
-        title: "Declaration of Independence",
-        year: "1776",
+        imageSrc: ReligiousFreedom.src,
+        title: "Virginia Statute of Religious Freedom",
+        year: "1786",
         description: "This is the description for item 6.",
         position: { top: "50%", left: "40%" }
     },
     {
         id: 7,
-        imageSrc: ReligiousFreedom.src,
-        title: "Statute for Religious Freedom",
-        year: "1786",
+        imageSrc: Constitution.src,
+        title: "United States Constitution",
+        year: "1787",
         description: "This is the description for item 7.",
         position: { top: "50%", left: "54%" }
     },
     {
         id: 8,
-        imageSrc: VADeclaration.src,
-        title: "Virginia Declaration of Rights",
-        year: "1776",
+        imageSrc: BillOfRights.src,
+        title: "Bill of Rights",
+        year: "1789",
         description: "This is the description for item 8.",
         position: { top: "50%", left: "68%" }
     }
