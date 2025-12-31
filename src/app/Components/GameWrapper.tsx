@@ -26,56 +26,56 @@ const gameItems: GameItem[] = [
         imageSrc: magnaCarta.src,
         title: "Item 1",
         description: "This is the description for item 1.",
-        position: { top: "15%", left: "25%" }
+        position: { top: "20%", left: "25%" }
     },
     {
         id: 2,
         imageSrc: articlesConfederation.src,
         title: "Item 2",
         description: "This is the description for item 2.",
-        position: { top: "15%", left: "40%" }
+        position: { top: "20%", left: "40%" }
     },
     {
         id: 3,
         imageSrc: ChartersVA.src,
         title: "Item 3",
         description: "This is the description for item 3.",
-        position: { top: "15%", left: "54%" }
+        position: { top: "20%", left: "54%" }
     },
     {
         id: 4,
         imageSrc: BillOfRights.src,
         title: "Item 4",
         description: "This is the description for item 4.",
-        position: { top: "15%", left: "68%" }
+        position: { top: "20%", left: "68%" }
     },
     {
         id: 5,
         imageSrc: Constitution.src,
         title: "Item 5",
         description: "This is the description for item 5.",
-        position: { top: "40%", left: "25%" }
+        position: { top: "60%", left: "25%" }
     },
     {
         id: 6,
         imageSrc: Declaration.src,
         title: "Item 6",
         description: "This is the description for item 6.",
-        position: { top: "40%", left: "40%" }
+        position: { top: "60%", left: "40%" }
     },
     {
         id: 7,
         imageSrc: ReligiousFreedom.src,
         title: "Item 7",
         description: "This is the description for item 7.",
-        position: { top: "40%", left: "54%" }
+        position: { top: "60%", left: "54%" }
     },
     {
         id: 8,
         imageSrc: VADeclaration.src,
         title: "Item 8",
         description: "This is the description for item 8.",
-        position: { top: "40%", left: "68%" }
+        position: { top: "60%", left: "68%" }
     },
 ];
 
