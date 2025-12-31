@@ -40,14 +40,14 @@ const gameItems: GameItem[] = [
         imageSrc: ChartersVA.src,
         title: "Item 3",
         description: "This is the description for item 3.",
-        position: { top: "15%", left: "52%" }
+        position: { top: "15%", left: "54%" }
     },
     {
         id: 4,
         imageSrc: BillOfRights.src,
         title: "Item 4",
         description: "This is the description for item 4.",
-        position: { top: "15%", left: "67%" }
+        position: { top: "15%", left: "68%" }
     },
     {
         id: 5,
@@ -92,7 +92,7 @@ const GameWrapper: React.FC = () => {
                     key={item.id}
                     src={item.imageSrc}
                     alt={item.title}
-                    className="cursor-pointer w-32 h-32 object-cover rounded-lg shadow-md hover:scale-105 transition-transform absolute"
+                    className="cursor-pointer w-32 h-32 object-cover shadow-md hover:scale-105 transition-transform absolute"
                     style={{ top: item.position.top, left: item.position.left }}
                     onClick={() => openModal(item)}
                 />
