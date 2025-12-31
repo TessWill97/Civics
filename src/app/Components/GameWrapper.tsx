@@ -2,7 +2,14 @@
 
 // GameWrapper.tsx
 import React, { useState } from "react";
-import gearIcon from "../settingsGear.png";
+import magnaCarta from "../MagnaCarta.png";
+import articlesConfederation from "../ArticlesOfConfederation.png";
+import ChartersVA from "../ChartersVA.png";
+import BillOfRights from "../BillOfRights.png";
+import Constitution from "../Constitution.png";
+import Declaration from "../Declaration.png";
+import ReligiousFreedom from "../ReligiousFreedom.png";
+import VADeclaration from "../VADeclaration.png";
 
 // Type for each game item
 interface GameItem {
@@ -16,25 +23,60 @@ interface GameItem {
 const gameItems: GameItem[] = [
     {
         id: 1,
-        imageSrc: gearIcon.src,
+        imageSrc: magnaCarta.src,
         title: "Item 1",
         description: "This is the description for item 1.",
-        position: { top: "10%", left: "20%" }
+        position: { top: "15%", left: "25%" }
     },
     {
         id: 2,
-        imageSrc: gearIcon.src,
+        imageSrc: articlesConfederation.src,
         title: "Item 2",
         description: "This is the description for item 2.",
-        position: { top: "40%", left: "50%" }
+        position: { top: "15%", left: "40%" }
     },
     {
         id: 3,
-        imageSrc: gearIcon.src,
+        imageSrc: ChartersVA.src,
         title: "Item 3",
         description: "This is the description for item 3.",
-        position: { top: "70%", left: "30%" }
-    }
+        position: { top: "15%", left: "55%" }
+    },
+    {
+        id: 4,
+        imageSrc: BillOfRights.src,
+        title: "Item 4",
+        description: "This is the description for item 4.",
+        position: { top: "15%", left: "70%" }
+    },
+    {
+        id: 5,
+        imageSrc: Constitution.src,
+        title: "Item 5",
+        description: "This is the description for item 5.",
+        position: { top: "40%", left: "25%" }
+    },
+    {
+        id: 6,
+        imageSrc: Declaration.src,
+        title: "Item 6",
+        description: "This is the description for item 6.",
+        position: { top: "40%", left: "40%" }
+    },
+    {
+        id: 7,
+        imageSrc: ReligiousFreedom.src,
+        title: "Item 7",
+        description: "This is the description for item 7.",
+        position: { top: "40%", left: "55%" }
+    },
+    {
+        id: 8,
+        imageSrc: VADeclaration.src,
+        title: "Item 8",
+        description: "This is the description for item 8.",
+        position: { top: "40%", left: "70%" }
+    },
 ];
 
 const GameWrapper: React.FC = () => {
