@@ -27,7 +27,7 @@ const gameItems: GameItem[] = [
         imageSrc: magnaCarta.src,
         title: "Magna Carta",
         year: "1215",
-        description: "This is the description for item 1.",
+        description: "This document was written during the oppressive reign of King John, who, much like other rulers of his time, set forth unfair taxes and passed cruel laws just for kicks. The English barons then got so angry that they threatened him with a civil war, and it forced the king to sign the Magna Carta at Runnymede. This document not only ensured that the king was subject to the law, rather than above it, but it also established rights such as the right to have a trial by jury and put a stop to excessive taxes and unnecessary imprisonment. Putting boundaries on the king's power makes this document an example of Limited Government since it allows the citizens to restrict the rulers and the power the government has.",
         position: { top: "20%", left: "25%" }
     },
     {
