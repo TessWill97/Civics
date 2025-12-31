@@ -33,7 +33,7 @@ const gameItems: GameItem[] = [
     {
         id: 3,
         imageSrc: ChartersVA.src,
-        title: "Charters of the Virginia Company of london",
+        title: "Charters of the Virginia Company of London",
         year: "1606",
         description: "This is the description for item 2.",
         position: { top: "20%", left: "40%" }
