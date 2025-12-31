@@ -54,28 +54,28 @@ const gameItems: GameItem[] = [
         imageSrc: Constitution.src,
         title: "Item 5",
         description: "This is the description for item 5.",
-        position: { top: "60%", left: "25%" }
+        position: { top: "50%", left: "25%" }
     },
     {
         id: 6,
         imageSrc: Declaration.src,
         title: "Item 6",
         description: "This is the description for item 6.",
-        position: { top: "60%", left: "40%" }
+        position: { top: "50%", left: "40%" }
     },
     {
         id: 7,
         imageSrc: ReligiousFreedom.src,
         title: "Item 7",
         description: "This is the description for item 7.",
-        position: { top: "60%", left: "54%" }
+        position: { top: "50%", left: "54%" }
     },
     {
         id: 8,
         imageSrc: VADeclaration.src,
         title: "Item 8",
         description: "This is the description for item 8.",
-        position: { top: "60%", left: "68%" }
+        position: { top: "50%", left: "68%" }
     },
 ];
 
