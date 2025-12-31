@@ -92,7 +92,7 @@ const GameWrapper: React.FC = () => {
                     key={item.id}
                     src={item.imageSrc}
                     alt={item.title}
-                    className="cursor-pointer w-32 h-48 object-cover shadow-md hover:scale-105 transition-transform absolute"
+                    className="cursor-pointer w-32 h-32 object-cover shadow-md hover:scale-105 transition-transform absolute"
                     style={{ top: item.position.top, left: item.position.left }}
                     onClick={() => openModal(item)}
                 />
