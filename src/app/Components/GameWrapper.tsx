@@ -33,21 +33,21 @@ const gameItems: GameItem[] = [
         imageSrc: articlesConfederation.src,
         title: "Item 2",
         description: "This is the description for item 2.",
-        position: { top: "15%", left: "38%" }
+        position: { top: "15%", left: "39%" }
     },
     {
         id: 3,
         imageSrc: ChartersVA.src,
         title: "Item 3",
         description: "This is the description for item 3.",
-        position: { top: "15%", left: "51%" }
+        position: { top: "15%", left: "52%" }
     },
     {
         id: 4,
         imageSrc: BillOfRights.src,
         title: "Item 4",
         description: "This is the description for item 4.",
-        position: { top: "15%", left: "65%" }
+        position: { top: "15%", left: "67%" }
     },
     {
         id: 5,
