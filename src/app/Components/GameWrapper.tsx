@@ -11,6 +11,16 @@ import Declaration from "../Declaration.png";
 import ReligiousFreedom from "../ReligiousFreedom.png";
 import VADeclaration from "../VADeclaration.png";
 
+import Marijuana from "../Marijuana.png";
+import MartinLuther from "../MartinLuther.png"
+import Nixon from "../Nixon.jpg";
+import VenturaCounty from "../VenturaCounty.png";
+import OutpatientClinics from "../OutpatientClinics.png";
+import IndividualFreedoms from "../IndividualFreedoms.png";
+import HandsOff from "../HandsOff.png";
+import ConstitutionPowers from "../ConstitutionPowers.png";
+
+
 // Type for each game item
 interface GameItem {
     id: number;
@@ -32,11 +42,11 @@ const gameItems: GameItem[] = [
         title: "Magna Carta",
         year: "1215",
         description:
-            "This document was written during the oppressive reign of King John...",
+            "This document was written during the oppressive reign of King John, who, much like other rulers of his time, set forth unfair taxes and passed cruel laws just for kicks. The English barons then got so angry that they threatened him with a civil war, and it forced the king to sign the Magna Carta at Runnymede. This document not only ensured that the king was subject to the law, rather than above it, but it also established rights such as the right to have a trial by jury and put a stop to excessive taxes and unnecessary imprisonment. Putting boundaries on the king's power makes this document an example of Limited Government since it allows the citizens to restrict the rulers and the power the government has.",
         position: { top: "20%", left: "25%" },
 
-        rightImageSrc: magnaCarta.src,
-        rightText: "The Magna Carta limited the power of the monarchy and established the principle that no one is above the law."
+        rightImageSrc: Nixon.src,
+        rightText: "This is an example of Limited Government because President Nixon was forced to resign after he broke the law, therefore following the principle that people in power can be taken out of office when they don’t follow the rules, just like how a teacher or construction worker can get fired for not performing adequately or doing something wrong."
     },
     {
         id: 2,
