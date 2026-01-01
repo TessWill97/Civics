@@ -143,7 +143,7 @@ const gameItems: GameItem[] = [
         year: "2026",
         description:
             "I'd hand out a Scavenger Hunt to every visitor and see if they can find every hidden “easter egg” hidden throughout the museum. If they find them all, they get 20% off in the souvenir shop.",
-        position: { top: "35%", left: "74%" },
+        position: { top: "35%", left: "90%" },
     }
 ];
 
