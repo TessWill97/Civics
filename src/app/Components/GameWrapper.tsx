@@ -20,6 +20,8 @@ import IndividualFreedoms from "../IndividualFreedoms.png";
 import HandsOff from "../HandsOff.png";
 import ConstitutionPowers from "../ConstitutionPowers.png";
 
+import ScavengerHunt from "../ScavengerHunt.png";
+
 
 // Type for each game item
 interface GameItem {
@@ -124,7 +126,15 @@ const gameItems: GameItem[] = [
         position: { top: "50%", left: "68%" },
         rightImageSrc: OutpatientClinics.src,
         rightText: "This is an example of Federalism, since Massachusetts created America’s first universal health care system in 2006, causing parts of the Affordable Care Act."
-
+    },
+    {
+        id: 9,
+        imageSrc: ScavengerHunt.src,
+        title: "Interactive Element",
+        year: "2026",
+        description:
+            " I'd hand out a Scavenger Hunt to every visitor and see if they can find every hidden “easter egg” hidden throughout the museum. If they find them all, they get 20% off in the souvenir shop.",
+        position: { top: "35%", left: "12%" },
     }
 ];
 
