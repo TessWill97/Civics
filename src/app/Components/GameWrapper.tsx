@@ -178,51 +178,65 @@ const GameWrapper: React.FC = () => {
                 >
                     <div
                         className="bg-white rounded-lg shadow-lg 
-                                   w-[90vw] max-w-5xl 
-                                   max-h-[85vh] overflow-hidden"
+                                w-[90vw] max-w-5xl 
+                                max-h-[85vh] overflow-hidden"
                         onClick={(e) => e.stopPropagation()}
                     >
-                        <div className="flex h-full">
+                        {(() => {
+                            const hasRightPanel =
+                                !!selectedItem.rightImageSrc || !!selectedItem.rightText;
 
-                            {/* LEFT PANEL */}
-                            <div className="w-1/2 p-6 overflow-y-auto">
-                                <h2 className="text-xl font-bold mb-2">
-                                    {selectedItem.title} ({selectedItem.year})
-                                </h2>
+                            return (
+                                <div className="flex h-full">
 
-                                <p className="mb-4">
-                                    {selectedItem.description}
-                                </p>
+                                    {/* LEFT PANEL */}
+                                    <div
+                                        className={`p-6 overflow-y-auto ${hasRightPanel ? "w-1/2" : "w-full"
+                                            }`}
+                                    >
+                                        <h2 className="text-xl font-bold mb-2">
+                                            {selectedItem.title} ({selectedItem.year})
+                                        </h2>
 
-                                <button
-                                    className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-                                    onClick={closeModal}
-                                >
-                                    Close
-                                </button>
-                            </div>
+                                        <p className="mb-4">
+                                            {selectedItem.description}
+                                        </p>
 
-                            {/* DIVIDER */}
-                            <div className="w-px bg-black" />
+                                        <button
+                                            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                                            onClick={closeModal}
+                                        >
+                                            Close
+                                        </button>
+                                    </div>
 
-                            {/* RIGHT PANEL */}
-                            <div className="w-1/2 p-6 flex flex-col items-center overflow-y-auto">
-                                {selectedItem.rightImageSrc && (
-                                    <img
-                                        src={selectedItem.rightImageSrc}
-                                        alt="Supplemental visual"
-                                        className="max-w-full max-h-64 object-contain mb-4"
-                                    />
-                                )}
+                                    {/* DIVIDER + RIGHT PANEL (ONLY IF CONTENT EXISTS) */}
+                                    {hasRightPanel && (
+                                        <>
+                                            {/* DIVIDER */}
+                                            <div className="w-px bg-black" />
 
-                                {selectedItem.rightText && (
-                                    <p className="text-gray-700 text-center">
-                                        {selectedItem.rightText}
-                                    </p>
-                                )}
-                            </div>
+                                            {/* RIGHT PANEL */}
+                                            <div className="w-1/2 p-6 flex flex-col items-center overflow-y-auto">
+                                                {selectedItem.rightImageSrc && (
+                                                    <img
+                                                        src={selectedItem.rightImageSrc}
+                                                        alt="Supplemental visual"
+                                                        className="max-w-full max-h-64 object-contain mb-4"
+                                                    />
+                                                )}
 
-                        </div>
+                                                {selectedItem.rightText && (
+                                                    <p className="text-gray-700 text-center">
+                                                        {selectedItem.rightText}
+                                                    </p>
+                                                )}
+                                            </div>
+                                        </>
+                                    )}
+                                </div>
+                            );
+                        })()}
                     </div>
                 </div>
             )}
